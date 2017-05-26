@@ -6,15 +6,15 @@
  
  
 ## Approach
-* I first implement GridSearch using coarse grids on individual hyperparameters while holding all other parameters same as the base model. This gives me a rough idea which hyperparameters are more influential to our problem and allow me to narrow down to a finer set of hyperparameters for GridSearch in next step. 
+* I first implement GridSearch using coarse grids on individual hyperparameters while holding all other parameters same as the base model. This gives me a rough idea which hyperparameters give more significant result to our problem and allow me to narrow down to a finer set of hyperparameters for GridSearch in next step. 
 
-* Next, I conduct GridSearch on combinations of selected hyperparameters. The best parameter set gives text accuracy 0.99xxx. 
+* Next, I conduct GridSearch on combinations of selected hyperparameters. It is observed that tweaking number of neurons, convolutional filter size, batch size and number of epochs could result a greater improvement on accuracy. The best parameter set gives text accuracy 0.99xxx.  
 
-* See *mnist-suki.ipyn* for the implementation algorithm.
+* See *mnist.ipyn* for the implementation algorithm.
  
  
 ## Improvement on Accuracy
-* The following combination of parameters gives the best result on test accuracy,   .
+* The following combination of parameters gives the best result on test accuracy.
  
  | Hyperparameter                 | Value                                                | Remarks                 |
  | ------------------------------ |----------------------------------------------------- |------------------------:|
@@ -29,9 +29,9 @@
 
  
 ## Takeaway
-* Compared with other ML algorithm, GridSearch can go crazy for neural net as there are numerous parameters when tuning a deep neural net and it is slow to train a deep neural net.
-* To implement GridSearch, it is more efficient to start with coarse grids of individual hyperparameters on a smaller dataset, followed by delicate grids of combinations of selected hyperparameters. 
-* It is important to understand the problem domain and leverage on previously applied techniques on the same (or similar) data problem. In our case, we start with a good enough CNN model on MNIST data and it is easier in hyperparameter tuning.
+* Tuning hyperparameters for deep neural nets is hardest among other ML algorithms as it is slow to train a deep neural net and there are numerours parameters. This makes GridSearch difficult for deep neural nets.
+* To implement GridSearch efficiently, it is better to start with coarse grids of individual hyperparameters on a smaller dataset, followed by fine grids on combinations of selected hyperparameters. 
+* It is important to understand the problem domain and leverage on previously applied techniques on the similar data problem (for example, ReLu works best with CNN in general). In our case, we start with a good enough CNN model on MNIST data which make it easier in subsequent hyperparameter tuning.
  
  
 ## Further Thoughts
