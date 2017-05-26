@@ -1,7 +1,3 @@
-# test-repo
-This is a test repo for my data science project.
-
-a change is made here
 # Submission to Challenge Task 1: Improve accuracy with GridSearch
  
 ## Challenge
@@ -38,8 +34,11 @@ My blog post on [“Tuning Hyperparameter for Deep Neural Nets” ](URL)
  
 ## Resources  
 [Resource1](http://machinelearningmastery.com/grid-search-hyperparameters-deep-learning-models-python-keras/)
+
 [Resource2](http://cs231n.github.io/neural-networks-3)
+
 [Resource3](https://arxiv.org/abs/1206.5533)
+
 [Deep Learning by Ian Goodfellow, Yoshua Bengio and Aaron Courville](URL)
  
  
