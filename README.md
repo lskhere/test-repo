@@ -1,3 +1,5 @@
+improves https://github.com/ziff/internship2017/issues/2
+
 # Submission to Challenge Task 1: Improve accuracy with GridSearch
  
  
